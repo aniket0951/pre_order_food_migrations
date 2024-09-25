@@ -78,15 +78,15 @@ type PreOrder struct {
 	UpdatedAt   time.Time
 }
 
-type OrderPayment struct {
-	ID            uuid.UUID `gorm:"column:id;type:uuid;default:uuid_generate_v4();primaryKey"`
-	PaymentMethod string    `gorm:"column:payment_method;not null"`
-	Status        string    `gorm:"column:status;not null"`
-	TransactionID string    `gorm:"column:transaction_id;not null"`
-	DebetorID     uuid.UUID `gorm:"column:debetor_id;not null"`
-	CreditorID    uuid.UUID `gorm:"column:creditor_id;not null"`
-	PreOrderID    uuid.UUID `gorm:"column:pre_order_id;not null"`
-	PreOrder      PreOrder  `gorm:"foreignKey:PreOrderID"`
-	CreatedAt     time.Time
-	UpdatedAt     time.Time
-}
+// type OrderPayment struct {
+// 	ID            uuid.UUID `gorm:"column:id;type:uuid;default:uuid_generate_v4();primaryKey"`
+// 	PaymentMethod string    `gorm:"column:payment_method;not null"`
+// 	Status        string    `gorm:"column:status;not null"`
+// 	TransactionID string    `gorm:"column:transaction_id;not null"`
+// 	DebetorID     uuid.UUID `gorm:"column:debetor_id;not null"`
+// 	CreditorID    uuid.UUID `gorm:"column:creditor_id;not null"`
+// 	PreOrderID    uuid.UUID `gorm:"column:pre_order_id;not null"`
+// 	PreOrder      PreOrder  `gorm:"foreignKey:PreOrderID"`
+// 	CreatedAt     time.Time
+// 	UpdatedAt     time.Time
+// }

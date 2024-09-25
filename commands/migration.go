@@ -57,13 +57,13 @@ func Migrate() *cobra.Command {
 				return err
 			}
 
-			if err := db.AutoMigrate(&models.PreOrder{}); err != nil {
-				log.Println("Migration Error models.Payment : ", err)
-				return err
-			}
+			// if err := db.AutoMigrate(&models.OrderPayment{}); err != nil {
+			// 	log.Println("Migration Error models.OrderPayment : ", err)
+			// 	return err
+			// }
 
-			if err := db.AutoMigrate(&models.OrderPayment{}); err != nil {
-				log.Println("Migration Error models.PaymentDetails : ", err)
+			if err := db.AutoMigrate(&models.PreOrders{}); err != nil {
+				log.Println("Migration Error models.PreOrders : ", err)
 				return err
 			}
 
